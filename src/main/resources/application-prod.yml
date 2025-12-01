@@ -24,3 +24,7 @@ logging:
   file:
     name: /var/log/retail-product-service/application.log
 
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:MySecretKeyForJWTTokenGenerationMustBeAtLeast256BitsLongForJWTTokenGenerationMustBeAtLeast256BitsLongForHS512Algorithm}
+  expiration: ${JWT_EXPIRATION:86400000} # 24 hours in milliseconds

@@ -51,3 +51,7 @@ logging:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
 
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:MySecretKeyForJWTTokenGenerationMustBeAtLeast256BitsLongForHS512Algorithm}
+  expiration: ${JWT_EXPIRATION:86400000} # 24 hours in milliseconds
